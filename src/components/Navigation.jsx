@@ -2,23 +2,28 @@ import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
 import metaLogo from '../assets/metalogo.png'
+import { IoMdMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+
 
 export default function Navigation() {
     const [activePage, setActivePage] = useState('Home');
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const handleMenuToggle = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     return (
         <>
-        <nav className='bg-primary p-3'>
-            <ul className='container flex justify-between'>
-                <span>
-                    <li>
-                    <a href="/" className='flex gap-3'>
+        <nav className={`navigation bg-primary p-3 flex ${menuOpen? 'open':''}`}>
+            <div className={`container flex justify-between`}>
+                <span className={`logo ${menuOpen? 'open':''}`}><a href="/" className='flex gap-3'>
                     <Image src={metaLogo} alt="" width={50} height={50}></Image>
-                <span className='text-white font-semibold text-3xl align-middle pt-2'>MetaLogic</span>
-                    </a>
-                </li>
+                <span className='text-white font-semibold text-3xl align-middle pt-2'>MetaLogic</span></a>
                 </span>
-                <span className='text-white flex gap-7 pt-3 text-lg font-semibold'>
+                <span className={`flex gap-56 items ${menuOpen? 'open':''}`}>
+                <ul className={`text-white flex gap-7 pt-3 text-lg font-semibold menu-items ${menuOpen? 'open':''}`}>
                 
                  <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Home' ? 'active' : ''}`}>
                             <a href="#" className="hover-underline-red" onClick={() => setActivePage('Home')}>Home</a>
@@ -35,11 +40,16 @@ export default function Navigation() {
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'About' ? 'active' : ''}`}>
                             <a href="#" className="hover-underline-red" onClick={() => setActivePage('About')}>About Us</a>
                         </li>
-                </span>
-                <span className='pt-3'>
-                <li className='text-white text-base font-medium bg-red-600 py-2 px-4 rounded-md'> <a href="#">Get in Touch</a></li>
-                </span>
+                        </ul>
+                        
+                        <ul className={`pt-1 menu-items ${menuOpen? 'open':''}`}>
+                <li className='text-white text-base font-medium bg-red-600 py-2 px-4 rounded-md touch'> <a href="#">Get in Touch</a></li>
                 </ul>
+                </span>
+                </div>
+
+                <div className={`menu-icon  pt-2 ${menuOpen? 'open':''} cursor-pointer`} onClick={handleMenuToggle}><IoMdMenu className='inline text-red-600 font-bold text-4xl' /></div>
+                <div className={`menu-close  pt-2 ${menuOpen? 'open':''} cursor-pointer`} onClick={handleMenuToggle}><IoMdClose className='inline text-black font-bold text-4xl' /></div>
         </nav>
         </>
     )
