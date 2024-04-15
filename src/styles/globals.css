@@ -8,6 +8,15 @@
   padding-right: .70rem;
   padding-left: .70rem;
 }
+.believe{
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-right: .70rem;
+  padding-left: .70rem;
+}
+.trans{
+  transition: width 0.3s ease;
+}
 .hover-underline-red {
   position: relative;
   text-decoration: none;
@@ -38,6 +47,12 @@
 .menu-close{
   display: none;
 }
+.image {
+  display: none;
+}
+.rocket{
+  background: linear-gradient(180deg, #b4b2b2 0, #b4b2b2 70%, #f5f5f5);
+}
 @media screen and (max-width: 1030px) {
   .container{
     margin-left: 10px;
@@ -58,6 +73,8 @@
   }
   .navigation.open{
     background-color: white;
+    height: 100%;
+    width: 100%;
   }
   .menu-items.open {
       display: flex;
@@ -84,5 +101,13 @@
 .menu-icon.open{
   display: none;
 }
+
 }
- 
+@media screen and (max-width: 768px) {
+  .imag{
+    display: none;
+  }
+  .ser-one{
+    width: 100%;
+  }
+}

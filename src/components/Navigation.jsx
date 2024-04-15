@@ -4,18 +4,19 @@ import { useState } from 'react';
 import metaLogo from '../assets/metalogo.png'
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import Link from 'next/link';
 
 
 export default function Navigation() {
     const [activePage, setActivePage] = useState('Home');
     const [menuOpen, setMenuOpen] = useState(false)
-
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
 
     return (
         <>
+        {/* bg-[${bgc}] */}
         <nav className={`navigation bg-primary p-3 flex ${menuOpen? 'open':''}`}>
             <div className={`container flex justify-between`}>
                 <span className={`logo ${menuOpen? 'open':''}`}><a href="/" className='flex gap-3'>
@@ -26,24 +27,29 @@ export default function Navigation() {
                 <ul className={`text-white flex gap-7 pt-3 text-lg font-semibold menu-items ${menuOpen? 'open':''}`}>
                 
                  <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Home' ? 'active' : ''}`}>
-                            <a href="#" className="hover-underline-red" onClick={() => setActivePage('Home')}>Home</a>
+                            <Link href="/" className="hover-underline-red" onClick={() => setActivePage('Home')}>Home</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Services' ? 'active' : ''}`}>
-                            <a href="#" className="hover-underline-red" onClick={() => setActivePage('Services')}>Services</a>
+                            <Link href="/services" className="hover-underline-red" onClick={() => {
+                                setActivePage('Services');
+                                }}>Services</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Career' ? 'active' : ''}`}>
-                            <a href="#" className="hover-underline-red" onClick={() => setActivePage('Career')}>Career</a>
+                            <Link href="/career" className="hover-underline-red" onClick={() => {
+                                setActivePage('Career')
+                                setMenuOpen(false)
+                                }}>Career</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Blogs' ? 'active' : ''}`}>
-                            <a href="#" className="hover-underline-red" onClick={() => setActivePage('Blogs')}>Blogs</a>
+                            <Link href="/blogs" className="hover-underline-red" onClick={() => setActivePage('Blogs')}>Blogs</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'About' ? 'active' : ''}`}>
-                            <a href="#" className="hover-underline-red" onClick={() => setActivePage('About')}>About Us</a>
+                            <Link href="/about" className="hover-underline-red" onClick={() => setActivePage('About')} >About Us</Link>
                         </li>
                         </ul>
                         
                         <ul className={`pt-1 menu-items ${menuOpen? 'open':''}`}>
-                <li className='text-white text-base font-medium bg-red-600 py-2 px-4 rounded-md touch'> <a href="#">Get in Touch</a></li>
+                <li className='text-white text-base font-medium bg-red-600 py-2 px-4 rounded-md touch'> <Link href="#">Get in Touch</Link></li>
                 </ul>
                 </span>
                 </div>
@@ -55,6 +61,4 @@ export default function Navigation() {
     )
     ;
 }
-
-
 
