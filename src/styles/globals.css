@@ -15,7 +15,7 @@
   padding-left: .70rem;
 }
 .trans{
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 .hover-underline-red {
   position: relative;

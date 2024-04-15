@@ -30,7 +30,7 @@ export default function Navigation() {
                             <Link href="/" className="hover-underline-red" onClick={() => setActivePage('Home')}>Home</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Services' ? 'active' : ''}`}>
-                            <Link href="/services" className="hover-underline-red" onClick={() => {
+                            <Link href="#" className="hover-underline-red" onClick={() => {
                                 setActivePage('Services');
                                 }}>Services</Link>
                         </li>
@@ -41,10 +41,10 @@ export default function Navigation() {
                                 }}>Career</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Blogs' ? 'active' : ''}`}>
-                            <Link href="/blogs" className="hover-underline-red" onClick={() => setActivePage('Blogs')}>Blogs</Link>
+                            <Link href="#" className="hover-underline-red" onClick={() => setActivePage('Blogs')}>Blogs</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'About' ? 'active' : ''}`}>
-                            <Link href="/about" className="hover-underline-red" onClick={() => setActivePage('About')} >About Us</Link>
+                            <Link href="#" className="hover-underline-red" onClick={() => setActivePage('About')} >About Us</Link>
                         </li>
                         </ul>
                         

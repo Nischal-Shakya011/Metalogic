@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useEffect } from 'react';
 import metaLogo from '../assets/metalogo.png'
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
@@ -16,6 +17,27 @@ import adaptability from '../assets/adaptability.svg'
 export default function Navigation() {
     const [activePage, setActivePage] = useState('Career');
     const [menuOpen, setMenuOpen] = useState(false)
+    const [isVisible, setIsVisible] = useState(false);
+    const [animationTriggered, setAnimationTriggered] = useState(false);
+
+    useEffect(() => {
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const totalHeight = document.documentElement.scrollHeight;
+
+            if (totalHeight - (scrollTop + windowHeight) < 100) { // Adjust this value to control when the animation triggers
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
@@ -37,7 +59,7 @@ export default function Navigation() {
                             <Link href="/" className="hover-underline-red" onClick={() => setActivePage('Home')}>Home</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Services' ? 'active' : ''}`}>
-                            <Link href="/services" className="hover-underline-red" onClick={() => {
+                            <Link href="#" className="hover-underline-red" onClick={() => {
                                 setActivePage('Services');
                                 }}>Services</Link>
                         </li>
@@ -48,10 +70,10 @@ export default function Navigation() {
                                 }}>Career</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'Blogs' ? 'active' : ''}`}>
-                            <Link href="/blogs" className="hover-underline-red" onClick={() => setActivePage('Blogs')}>Blogs</Link>
+                            <Link href="#" className="hover-underline-red" onClick={() => setActivePage('Blogs')}>Blogs</Link>
                         </li>
                         <li className={`nav transition-all duration-200 ease-linear ${activePage === 'About' ? 'active' : ''}`}>
-                            <Link href="/about" className="hover-underline-red" onClick={() => setActivePage('About')} >About Us</Link>
+                            <Link href="#" className="hover-underline-red" onClick={() => setActivePage('About')} >About Us</Link>
                         </li>
                         </ul>
                         
@@ -78,7 +100,7 @@ export default function Navigation() {
 
         <div className='bg-[#f5f5f5] text-center py-24'>
 
-<div className='flex flex-col gap-5'>
+<div className={`flex flex-col gap-5  ${isVisible ? 'trans' : ''}`}>
     <h5 className='text-2xl font-semibold text-red-600'>Values</h5>
     <h2 className='text-primary text-4xl font-bold'>We Believe in</h2>
     <p className='text-slate-700 text-base'>We believe in creating an environment where individuals can thrive and make a<br /> meaningful impact.</p>
@@ -86,36 +108,36 @@ export default function Navigation() {
 <div className='grid grid-cols-3 gap-6 believe py-8'>
 
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <Image src={continious} width={50} height={50}></Image>
+    <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={continious} width={30} height={30}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Continious Learning</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We invest in our team's growth through ongoing training, mentorship,
          and opportunities to expand your skill set.
          We're dedicated to your professional development journey.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <Image src={teamwork} width={50} height={50}></Image>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={teamwork} width={30} height={30}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Team Work</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We believe that best solutions comes from diverse perspective and collaborative efforts.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <Image src={innovation} width={50} height={50}></Image>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={innovation} width={30} height={30}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Innovation</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Whether it's the quality of our work, the impact we make, or the relationships we build,
      we consistently strive for the highest standards.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <Image src={mentorship} width={50} height={50}></Image>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={mentorship} width={30} height={30}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Mentorship</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We embrace change, learn from challenges, and remain resilient in the face of obstacles,
      always seeking opportunities for improvement.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <Image src={impact} width={50} height={50}></Image>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={impact} width={30} height={30}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Tangible Impact</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We're committed to delivering solutions that not only meet but exceed their expectations.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <Image src={adaptability} width={50} height={50}></Image>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={adaptability} width={30} height={30}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Adaptability</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Thrive in a fast-paced world with resilience as your ally, valuing and cultivating
      adaptability in your career journey</p>
