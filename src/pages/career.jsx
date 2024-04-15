@@ -12,6 +12,15 @@ import innovation from '../assets/innovation.svg'
 import mentorship from '../assets/mentorship.svg'
 import teamwork from '../assets/team_work.svg'
 import adaptability from '../assets/adaptability.svg'
+import flexible from '../assets/flexible.svg'
+import ownership from '../assets/ownership.svg'
+import growth from '../assets/growth.svg'
+import heard from '../assets/heard.svg'
+import teamspirit from '../assets/teamspirit.svg'
+import inclusivity from '../assets/inclusivity.svg'
+import transparent from '../assets/transparent.svg'
+import fulepassion from '../assets/fulepassion.svg'
+
 
 
 export default function Navigation() {
@@ -100,7 +109,7 @@ export default function Navigation() {
 
         <div className='bg-[#f5f5f5] text-center py-24'>
 
-<div className={`flex flex-col gap-5  ${isVisible ? 'trans' : ''}`}>
+<div className={`flex flex-col gap-5`}>
     <h5 className='text-2xl font-semibold text-red-600'>Values</h5>
     <h2 className='text-primary text-4xl font-bold'>We Believe in</h2>
     <p className='text-slate-700 text-base'>We believe in creating an environment where individuals can thrive and make a<br /> meaningful impact.</p>
@@ -142,15 +151,63 @@ export default function Navigation() {
     <p className='text-gray-600 space-y-0 text-sm'>Thrive in a fast-paced world with resilience as your ally, valuing and cultivating
      adaptability in your career journey</p>
 </div>
-
-
+</div>
+<div className='bg-white py-20'>
+<div className='container '>
+<div className={`flex flex-col gap-5`}>
+    <h5 className='text-2xl font-semibold text-red-600'>Benefits</h5>
+    <h2 className='text-primary text-4xl font-bold'>Life At Metalogic</h2>
+</div>
+<div className='grid grid-cols-4 gap-4 py-8'>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={flexible} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Flexibility at work</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>Do your best work at a time and place that fits us and your work-life balance.</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={ownership} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Take Ownership</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>Take responsibility to solve customer challenges by acting as your own boss.</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={growth} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Unlimited Growth</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>With no inner circle… absolutely everyone has the same opportunity to thrive.</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={heard} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Make Yourself Heard</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>We encourage diverse perspectives - making it count in achieving our collective goals.</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={teamspirit} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Team Spirit</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>Come together, work as one – this is at the heart of how we work, achieve results and collaborate.</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={inclusivity} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Inclusivity at Work</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>We believe that everyone is entitled to equal opportunities to learn, lead, and grow in all directions</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={transparent} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Transparent Environment</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>Build confidence in a culture of trust and open communication - with each other and our clients.</p>
+</div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
+<div><Image src={fulepassion} width={40} height={40}></Image></div>
+    <h3 className='text-xl font-bold text-primary'>Fuel Your Passion</h3>
+    <p className='text-gray-600 space-y-0 text-sm'>We encourage you to strive, push the limits and achieve your dreams by being best you can be.</p>
+</div>
 
 </div>
-        </div>
+</div>
+</div>
+</div>
         </>
     }
 
         </>
     )
-    ;
+    
 }
