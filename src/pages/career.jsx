@@ -20,36 +20,29 @@ import teamspirit from '../assets/teamspirit.svg'
 import inclusivity from '../assets/inclusivity.svg'
 import transparent from '../assets/transparent.svg'
 import fulepassion from '../assets/fulepassion.svg'
+import bonus from '../assets/bonus.svg'
+import health from '../assets/health.svg'
+import paidleave from '../assets/paidleave.svg'
+import learning from '../assets/learning.svg'
+import food from '../assets/food.svg'
+import teambuilding from '../assets/teambuilding.svg'
 
 
 
 export default function Navigation() {
     const [activePage, setActivePage] = useState('Career');
-    const [menuOpen, setMenuOpen] = useState(false)
-    const [isVisible, setIsVisible] = useState(false);
-    const [animationTriggered, setAnimationTriggered] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [mouseOver, setMouseOver] = useState(false);
 
-    useEffect(() => {
-        function handleScroll() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const totalHeight = document.documentElement.scrollHeight;
-
-            if (totalHeight - (scrollTop + windowHeight) < 100) { // Adjust this value to control when the animation triggers
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
+    function handleOver(){
+        setMouseOver(true)
+    }
+    function handleOut(){
+        setMouseOver(false)
+    }
 
     return (
         <>
@@ -116,37 +109,37 @@ export default function Navigation() {
 </div>
 <div className='grid grid-cols-3 gap-6 believe py-8'>
 
-<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-    <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={continious} width={30} height={30}></Image></div>
+<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
+    <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={continious} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Continious Learning</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We invest in our team's growth through ongoing training, mentorship,
          and opportunities to expand your skill set.
          We're dedicated to your professional development journey.</p>
 </div>
-<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={teamwork} width={30} height={30}></Image></div>
+<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={teamwork} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Team Work</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We believe that best solutions comes from diverse perspective and collaborative efforts.</p>
 </div>
-<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={innovation} width={30} height={30}></Image></div>
+<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={innovation} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Innovation</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Whether it's the quality of our work, the impact we make, or the relationships we build,
      we consistently strive for the highest standards.</p>
 </div>
-<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={mentorship} width={30} height={30}></Image></div>
+<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={mentorship} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Mentorship</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We embrace change, learn from challenges, and remain resilient in the face of obstacles,
      always seeking opportunities for improvement.</p>
 </div>
-<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={impact} width={30} height={30}></Image></div>
+<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={impact} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Tangible Impact</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We're committed to delivering solutions that not only meet but exceed their expectations.</p>
 </div>
-<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left'>
-<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={adaptability} width={30} height={30}></Image></div>
+<div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
+<div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={adaptability} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Adaptability</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Thrive in a fast-paced world with resilience as your ally, valuing and cultivating
      adaptability in your career journey</p>
@@ -159,48 +152,87 @@ export default function Navigation() {
     <h2 className='text-primary text-4xl font-bold'>Life At Metalogic</h2>
 </div>
 <div className='grid grid-cols-4 gap-4 py-8'>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={flexible} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={flexible} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Flexibility at work</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Do your best work at a time and place that fits us and your work-life balance.</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={ownership} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={ownership} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Take Ownership</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Take responsibility to solve customer challenges by acting as your own boss.</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={growth} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={growth} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Unlimited Growth</h3>
     <p className='text-gray-600 space-y-0 text-sm'>With no inner circle… absolutely everyone has the same opportunity to thrive.</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={heard} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={heard} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Make Yourself Heard</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We encourage diverse perspectives - making it count in achieving our collective goals.</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={teamspirit} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={teamspirit} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Team Spirit</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Come together, work as one – this is at the heart of how we work, achieve results and collaborate.</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={inclusivity} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={inclusivity} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Inclusivity at Work</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We believe that everyone is entitled to equal opportunities to learn, lead, and grow in all directions</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={transparent} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={transparent} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Transparent Environment</h3>
     <p className='text-gray-600 space-y-0 text-sm'>Build confidence in a culture of trust and open communication - with each other and our clients.</p>
 </div>
-<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg '>
-<div><Image src={fulepassion} width={40} height={40}></Image></div>
+<div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
+<div><Image src={fulepassion} width={40} height={40} className={'scaleImg'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Fuel Your Passion</h3>
     <p className='text-gray-600 space-y-0 text-sm'>We encourage you to strive, push the limits and achieve your dreams by being best you can be.</p>
 </div>
 
 </div>
+</div>
+</div>
+
+
+<div className='bg-[#ffffe1] py-24'>
+<div className='container flex gap-44'>
+    <div className='w-1/4 text-left flex flex-col gap-5 pl-8'>
+    <h3 className='text-2xl font-bold text-primary'>Metalogic Cares For You</h3>
+    <p className='text-gray-600 space-y-0 text-base'>We're less about valuing perks and more about valuing people. Our employee benefits are
+     built around enhancing your wellbeing - at work and at home</p>
+    </div>
+    <div className='w-2/4 grid grid-cols-3 gap-4 text-center'>
+
+    <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover'>
+    <Image src={bonus} width={40} height={40} className={`rotateImage`}></Image>
+    <h3 className='text-primary text-xl font-semibold'>Performance Bonus</h3>
+    </div>
+    <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover' >
+    <Image src={health} width={40} height={40} className={`rotateImage`}></Image>
+    <h3 className='text-primary text-xl font-semibold'>Health Benefits</h3>
+    </div>
+    <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover'>
+    <Image src={paidleave} width={40} height={40} className={`rotateImage`}></Image>
+    <h3 className='text-primary text-xl font-semibold'>Paid Leave Policy</h3>
+    </div>
+    <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover' >
+    <Image src={learning} width={40} height={40} className={`rotateImage`}></Image>
+    <h3 className='text-primary text-xl font-semibold'>Learning And Development</h3>
+    </div>
+    <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover' >
+    <Image src={food} width={40} height={40} className={`rotateImage`}></Image>
+    <h3 className='text-primary text-xl font-semibold'>Food Credit</h3>
+    </div>
+    <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover' >
+    <Image src={teambuilding} width={40} height={40} className={`rotateImage`}></Image>
+    <h3 className='text-primary text-xl font-semibold'>Team Activities</h3>
+    </div>
+    
+    </div>
 </div>
 </div>
 </div>

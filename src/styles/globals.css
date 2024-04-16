@@ -34,6 +34,19 @@
   background-color: red;
   transition: width 0.3s ease; /* Transition the width */
 }
+.rotateHover:hover .rotateImage {
+  transform: rotate(-12deg) scale(1.2); 
+  transition: transform 0.3s ease; 
+}
+
+.hoverValues:hover .rot {
+  transform: rotate(-12deg); 
+  transition: transform 0.3s ease; 
+}
+.hoverBenefits:hover .scaleImg {
+  transform: scale(1.2); 
+  transition: transform 0.3s ease; 
+}
 
 .hover-underline-red:hover::before {
   width: 50%; /* Expand to 50% on hover */
