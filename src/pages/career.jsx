@@ -28,6 +28,7 @@ import food from '../assets/food.svg'
 import teambuilding from '../assets/teambuilding.svg'
 import { CiSearch } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
+import Footer from '@/components/Footer';
 
 
 export default function Navigation() {
@@ -285,6 +286,7 @@ export default function Navigation() {
 </div>
 </div>
 </div>
+<Footer/>
         </>
     }
 
