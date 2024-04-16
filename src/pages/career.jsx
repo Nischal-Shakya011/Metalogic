@@ -26,7 +26,8 @@ import paidleave from '../assets/paidleave.svg'
 import learning from '../assets/learning.svg'
 import food from '../assets/food.svg'
 import teambuilding from '../assets/teambuilding.svg'
-
+import { CiSearch } from "react-icons/ci";
+import { CiMail } from "react-icons/ci";
 
 
 export default function Navigation() {
@@ -100,7 +101,7 @@ export default function Navigation() {
             </div>
         </div>
 
-        <div className='bg-[#f5f5f5] text-center py-24'>
+        <div className='bg-[#f5f5f5] text-center pt-24'>
 
 <div className={`flex flex-col gap-5`}>
     <h5 className='text-2xl font-semibold text-red-600'>Values</h5>
@@ -233,6 +234,54 @@ export default function Navigation() {
     </div>
     
     </div>
+</div>
+</div>
+
+<div className='bg-white py-28'>
+    <div className={`flex flex-col gap-5`}>
+    <h5 className='text-2xl font-semibold text-yellow-600'>Opportunities</h5>
+    <h2 className='text-primary text-4xl font-bold'>Available Vacancies</h2>
+
+    <form action="">
+        <div className='flex justify-center'>
+        <div className='w-[50%]'>
+        <input type="text" className='border border-gray-200 p-2 w-full rounded-lg' placeholder='Job Title/Keyword' /><br /><br />
+<div className='flex gap-3'><select name="level" id="level" className='border border-gray-200 w-[90%]  p-2 rounded-lg outline-none'>
+<option value="">Internships</option>
+<option value="">Junior Level</option>
+<option value="">Mid Level</option>
+<option value="">Senior</option>
+        </select>
+        <button className='bg-red-600 px-6 rounded-lg'><CiSearch className='text-white text-2xl font-bold'/></button></div>
+        </div>
+        </div>
+    </form>
+</div>
+<div className='flex justify-center py-24'>
+<div className='w-[50%] text-left'>
+    <h3 className='text-xl font-semibold'>2 Job Offers</h3>
+    <div className='flex justify-between mt-5 py-2 px-1 border-b border-[#bdbbbb] hover:bg-slate-100' >
+        <div> <span className='font-bold'> Frontend Intern (MERN Stack)</span> <br />
+<span className='text-blue-600'>(219 applicants )</span></div>
+        <div>Full Time</div>
+        <div>Lalitpur, Kathmandu</div>
+        <div><button className='bg-red-300 rounded-3xl py-1 px-4'>closed</button></div>
+    </div>
+   
+</div>
+</div>
+    </div>
+<div className='bg-[#cec6c6] flex justify-center py-24'>
+    <div className='w-[50%] flex flex-col gap-8'>
+    <p className='text-xl font-semibold'>Subscribe to our News Letters</p>
+    <p className='text- text-[#666262]'>Stay informed, inspired, and equipped with the latest trends and breakthroughs in your field.</p>
+    <form action="">
+        <div className='flex gap-4 justify-center'>
+        <input type="text" className='bg-white p-3 w-[70%] rounded-lg shadow-lg'placeholder='Please Enter Your Email'/>
+        <button className='px-6 py-3 bg-red-500 text-white rounded-xl font-semibold'><CiMail className='inline text-white font- text-2xl' />  Subscribe</button>
+        </div>
+        
+    </form>
 </div>
 </div>
 </div>

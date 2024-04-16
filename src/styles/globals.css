@@ -51,6 +51,13 @@
 .hover-underline-red:hover::before {
   width: 50%; /* Expand to 50% on hover */
 }
+option{
+  /* background: white; */
+  /* border-color: '#b4b2b2s'; */
+  /* border-radius : 8px; */
+   /* box-shadow: #b4b2b2; */
+
+}
 .nav.active .hover-underline-red::before {
   width: 50%;
 }
