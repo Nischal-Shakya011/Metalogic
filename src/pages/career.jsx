@@ -390,7 +390,7 @@ ref={ref7}
     <form action="">
         <div className='flex justify-center'>
         <div className='w-[100%] md:w-[50%]'>
-        <input type="text" className='border border-gray-200 p-2 w-full rounded-lg' placeholder='Job Title/Keyword' /><br /><br />
+        <input type="text" className='border border-gray-200 p-2 w-full rounded-lg outline-none' placeholder='Job Title/Keyword' /><br /><br />
 <div className='flex gap-3'><select name="level" id="level" className='border border-gray-200 w-[90%]  p-2 rounded-lg outline-none'>
 <option value="">Internships</option>
 <option value="">Junior Level</option>
@@ -423,7 +423,7 @@ ref={ref7}
     <p className='text- text-[#666262]'>Stay informed, inspired, and equipped with the latest trends and breakthroughs in your field.</p>
     <form action="">
         <div className='flex gap-4 justify-center'>
-        <input type="text" className='bg-white p-2 md:p-3 w-[70%] rounded-lg shadow-lg'placeholder='Please Enter Your Email'/>
+        <input type="text" className='bg-white p-2 md:p-3 w-[70%] rounded-lg shadow-lg outline-none'placeholder='Please Enter Your Email'/>
         <button className='p-2 md:px-6 md:py-3  bg-red-500 text-white rounded-xl font-semibold'><CiMail className='inline text-white font- text-2xl' />  Subscribe</button>
         </div>
         
