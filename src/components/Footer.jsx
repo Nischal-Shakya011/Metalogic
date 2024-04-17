@@ -35,39 +35,39 @@ export default function Footer(){
 <div className="text-white flex flex-col gap-1">
     <h3 className="font-semibold">Company</h3>
     <ul className="text-sm">
-        <li><a href="#">Feedback</a></li>
-        <li><a href="#">Partnership</a></li>
-        <li><a href="#">Terms and Conditions</a></li>
+        <li><Link href="#">Feedback</Link></li>
+        <li><Link href="#">Partnership</Link></li>
+        <li><Link href="#">Terms and Conditions</Link></li>
     </ul>
 </div>
 <div className="text-white flex flex-col gap-1">
     <h3 className="font-semibold">Services</h3>
     <ul className="text-sm">
-        <li><a href="#">Custom Software Development</a></li>
-        <li><a href="#">Web Development</a></li>
-        <li><a href="#">Mobile Web Development</a></li>
-        <li><a href="#">Cloud Computing Service</a></li>
-        <li><a href="#">Quality Assurance and Testing</a></li>
-        <li><a href="#">UI/UX Designing</a></li>
-        <li><a href="#">Maintenance and Support</a></li>
-        <li><a href="#">Dev Ops</a></li>
-        <li><a href="#">Blockchain Solutions</a></li>
+        <li><Link href="#">Custom Software Development</Link></li>
+        <li><Link href="#">Web Development</Link></li>
+        <li><Link href="#">Mobile Web Development</Link></li>
+        <li><Link href="#">Cloud Computing Service</Link></li>
+        <li><Link href="#">Quality Assurance and Testing</Link></li>
+        <li><Link href="#">UI/UX Designing</Link></li>
+        <li><Link href="#">Maintenance and Support</Link></li>
+        <li><Link href="#">Dev Ops</Link></li>
+        <li><Link href="#">Blockchain Solutions</Link></li>
     </ul>
 </div>
 <div className="text-white flex flex-col gap-1">
     <h3 className="font-semibold">Join</h3>
     <ul className="text-sm">
-        <li><a href="#">Careers at MetaLogic</a></li>
-        <li><a href="#">Internships</a></li>
+        <li><Link href="#">Careers at MetaLogic</Link></li>
+        <li><Link href="#">Internships</Link></li>
     </ul>
 </div>
 <div className="text-white flex flex-col gap-1">
     <h3 className="font-semibold">Join us on Social Medias</h3>
     <ul className="flex gap-3">
-    <li className="text-4xl font-bold"><a href="#"><FaWhatsapp className="inline text-white" /></a></li>
-    <li className="text-4xl font-bold"><a href="#"><CiFacebook className="inline text-white" /></a></li>
-        <li className="text-4xl font-bold"><a href="#"><FaInstagram className="inline text-white" /></a></li>
-        <li className="text-4xl font-bold"><a href="#"><CiLinkedin className="inline text-white" /></a></li>
+    <li className="text-4xl font-bold"><Link href="#"><FaWhatsapp className="inline text-white" /></Link></li>
+    <li className="text-4xl font-bold"><Link href="#"><CiFacebook className="inline text-white" /></Link></li>
+        <li className="text-4xl font-bold"><Link href="#"><FaInstagram className="inline text-white" /></Link></li>
+        <li className="text-4xl font-bold"><Link href="#"><CiLinkedin className="inline text-white" /></Link></li>
 
     </ul>
 </div>
