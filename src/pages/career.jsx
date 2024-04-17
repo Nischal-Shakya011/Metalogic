@@ -405,7 +405,7 @@ ref={ref7}
 </motion.div>
 <div className='container flex justify-center py-24'>
 <div className='w-[100%] md:w-[50%] text-left'>
-    <h3 className='text-xl font-semibold'>2 Job Offers</h3>
+    <h3 className='text-xl font-semibold'>1 Job Offers</h3>
     <div className='flex justify-between mt-5 py-2 px-1 md border-b border-[#bdbbbb] hover:bg-slate-100' >
         <div> <span className='font-bold'> Frontend Intern (MERN Stack)</span> <br />
 <span className='text-blue-600'>(219 applicants )</span></div>
