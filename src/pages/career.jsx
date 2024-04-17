@@ -63,49 +63,49 @@ if(isInView1){
     mainControls1.start('visible')
     // console.log(isInView);
 }
-    },[isInView1])
+    },[isInView1, mainControls1])
 
     useEffect(()=>{
         if(isInView2){
             mainControls2.start('visible')
             // console.log(isInView);
         }
-            },[isInView2])
+            },[isInView2, mainControls2])
 
             useEffect(()=>{
                 if(isInView3){
                     mainControls3.start('visible')
                     // console.log(isInView);
                 }
-                    },[isInView3])
+                    },[isInView3, mainControls3])
 
                     useEffect(()=>{
                         if(isInView4){
                             mainControls4.start('visible')
                             // console.log(isInView);
                         }
-                            },[isInView4])
+                            },[isInView4, mainControls4])
 
                             useEffect(()=>{
                                 if(isInView5){
                                     mainControls5.start('visible')
                                     // console.log(isInView);
                                 }
-                                    },[isInView5])
+                                    },[isInView5, mainControls5])
 
                                     useEffect(()=>{
                                         if(isInView6){
                                             mainControls6.start('visible')
                                             // console.log(isInView);
                                         }
-                                            },[isInView6])
+                                            },[isInView6, mainControls6])
 
                                             useEffect(()=>{
                                                 if(isInView7){
                                                     mainControls7.start('visible')
                                                     // console.log(isInView);
                                                 }
-                                                    },[isInView7])
+                                                    },[isInView7, mainControls7])
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
@@ -118,9 +118,9 @@ if(isInView1){
         
         <nav className={`navigation bg-[#b4b2b2] border-b border-[#d1c8c8] outline-none p-3 flex ${menuOpen? 'open':''}`}>
             <div className={`container flex justify-between`}>
-                <span className={`logo ${menuOpen? 'open':''}`}><a href="/" className='flex gap-3'>
+                <span className={`logo ${menuOpen? 'open':''}`}><Link href="/" className='flex gap-3'>
                     <Image src={metaLogo}  alt="" width={50} height={50}></Image>
-                <span className='text-primary font-semibold text-3xl align-middle pt-2'>MetaLogic</span></a>
+                <span className='text-primary font-semibold text-3xl align-middle pt-2'>MetaLogic</span></Link>
                 </span>
                 <span className={`flex gap-56 items ${menuOpen? 'open':''}`}>
                 <ul className={`text-primary flex gap-7 pt-3 text-lg font-semibold menu-items ${menuOpen? 'open':''}`}>
@@ -164,7 +164,7 @@ if(isInView1){
         <div className=' flex flex-col gap-10 text-center rocket py-20'>
             <div className='text-2xl font-semibold'>Careers</div>
             <div className='font-bold text-6xl'>Navigate Your Next <br /><span className='text-green-700'>Career</span> Move</div>
-            <div className='text-slate-800 text-base'>We're continiously searching for the<br /> right talent. Check if you're a good<br /> match.</div>
+            <div className='text-slate-800 text-base'>We&apos;re continiously searching for the<br /> right talent. Check if you&apos;re a good<br /> match.</div>
             <div className='text-center'>
             <button className='bg-primary text-white py-2 px-6 rounded-lg'>Explore Opportunities</button>
             </div>
@@ -206,9 +206,9 @@ ref={ref2}
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
     <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={continious} alt={''} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Continious Learning</h3>
-    <p className='text-gray-600 space-y-0 text-sm'>We invest in our team's growth through ongoing training, mentorship,
+    <p className='text-gray-600 space-y-0 text-sm'>We invest in our team&apos;s growth through ongoing training, mentorship,
          and opportunities to expand your skill set.
-         We're dedicated to your professional development journey.</p>
+         We&apos;re dedicated to your professional development journey.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
 <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={teamwork} alt={''} width={30} height={30} className={'rot'}></Image></div>
@@ -218,7 +218,7 @@ ref={ref2}
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
 <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={innovation} alt={''} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Innovation</h3>
-    <p className='text-gray-600 space-y-0 text-sm'>Whether it's the quality of our work, the impact we make, or the relationships we build,
+    <p className='text-gray-600 space-y-0 text-sm'>Whether it&apos;s the quality of our work, the impact we make, or the relationships we build,
      we consistently strive for the highest standards.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
@@ -230,7 +230,7 @@ ref={ref2}
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
 <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={impact} alt={''} width={30} height={30} className={'rot'}></Image></div>
     <h3 className='text-xl font-bold text-primary'>Tangible Impact</h3>
-    <p className='text-gray-600 space-y-0 text-sm'>We're committed to delivering solutions that not only meet but exceed their expectations.</p>
+    <p className='text-gray-600 space-y-0 text-sm'>We&apos;re committed to delivering solutions that not only meet but exceed their expectations.</p>
 </div>
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
 <div className='p-4 bg-gray-200 w-fit rounded-xl'><Image src={adaptability} alt={''} width={30} height={30} className={'rot'}></Image></div>
@@ -335,7 +335,7 @@ ref={ref5}
 
     <div className='w-full md:w-1/4 text-left flex flex-col gap-5 pl-8'>
     <h3 className='text-2xl font-bold text-primary'>Metalogic Cares For You</h3>
-    <p className='text-gray-600 space-y-0 text-base'>We're less about valuing perks and more about valuing people. Our employee benefits are
+    <p className='text-gray-600 space-y-0 text-base'>We&apos;re less about valuing perks and more about valuing people. Our employee benefits are
      built around enhancing your wellbeing - at work and at home</p>
     </div>
 

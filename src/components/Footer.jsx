@@ -9,7 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { MdCopyright } from "react-icons/md";
-
+import Link from "next/link";
 
 export default function Footer(){
 

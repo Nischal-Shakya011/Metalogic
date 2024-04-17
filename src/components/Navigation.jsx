@@ -19,9 +19,9 @@ export default function Navigation() {
         {/* bg-[${bgc}] */}
         <nav className={`navigation bg-primary p-3 flex ${menuOpen? 'open':''}`}>
             <div className={`container flex justify-between`}>
-                <span className={`logo ${menuOpen? 'open':''}`}><a href="/" className='flex gap-3'>
+                <span className={`logo ${menuOpen? 'open':''}`}><Link href="/" className='flex gap-3'>
                     <Image src={metaLogo} alt="" width={50} height={50}></Image>
-                <span className='text-white font-semibold text-3xl align-middle pt-2'>MetaLogic</span></a>
+                <span className='text-white font-semibold text-3xl align-middle pt-2'>MetaLogic</span></Link>
                 </span>
                 <span className={`flex gap-56 items ${menuOpen? 'open':''}`}>
                 <ul className={`text-white flex gap-7 pt-3 text-lg font-semibold menu-items ${menuOpen? 'open':''}`}>
