@@ -1,4 +1,5 @@
 import React from 'react';
+import {useRef } from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -28,23 +29,88 @@ import food from '../assets/food.svg'
 import teambuilding from '../assets/teambuilding.svg'
 import { CiSearch } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
+import { motion, useInView, useAnimation } from "framer-motion"
 import Footer from '@/components/Footer';
 
 
-export default function Navigation() {
+export default function Career() {
     const [activePage, setActivePage] = useState('Career');
     const [menuOpen, setMenuOpen] = useState(false);
-    const [mouseOver, setMouseOver] = useState(false);
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+    const ref4 = useRef(null);
+    const ref5 = useRef(null);
+    const ref6 = useRef(null);
+    const ref7 = useRef(null);
+    const isInView1 = useInView(ref1, {once: true});
+    const isInView2 = useInView(ref2, {once: true});
+    const isInView3 = useInView(ref3, {once: true});
+    const isInView4 = useInView(ref4, {once: true});
+    const isInView5 = useInView(ref5, {once: true});
+    const isInView6 = useInView(ref6, {once: true});
+    const isInView7 = useInView(ref7, {once: true});
+    const mainControls1 = useAnimation();
+    const mainControls2 = useAnimation();
+    const mainControls3 = useAnimation();
+    const mainControls4 = useAnimation();
+    const mainControls5 = useAnimation();
+    const mainControls6 = useAnimation();
+    const mainControls7 = useAnimation();
+
+    useEffect(()=>{
+if(isInView1){
+    mainControls1.start('visible')
+    // console.log(isInView);
+}
+    },[isInView1])
+
+    useEffect(()=>{
+        if(isInView2){
+            mainControls2.start('visible')
+            // console.log(isInView);
+        }
+            },[isInView2])
+
+            useEffect(()=>{
+                if(isInView3){
+                    mainControls3.start('visible')
+                    // console.log(isInView);
+                }
+                    },[isInView3])
+
+                    useEffect(()=>{
+                        if(isInView4){
+                            mainControls4.start('visible')
+                            // console.log(isInView);
+                        }
+                            },[isInView4])
+
+                            useEffect(()=>{
+                                if(isInView5){
+                                    mainControls5.start('visible')
+                                    // console.log(isInView);
+                                }
+                                    },[isInView5])
+
+                                    useEffect(()=>{
+                                        if(isInView6){
+                                            mainControls6.start('visible')
+                                            // console.log(isInView);
+                                        }
+                                            },[isInView6])
+
+                                            useEffect(()=>{
+                                                if(isInView7){
+                                                    mainControls7.start('visible')
+                                                    // console.log(isInView);
+                                                }
+                                                    },[isInView7])
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
-    function handleOver(){
-        setMouseOver(true)
-    }
-    function handleOut(){
-        setMouseOver(false)
-    }
+  
 
     return (
         <>
@@ -93,6 +159,8 @@ export default function Navigation() {
         {!menuOpen
         &&
         <>
+        <div >
+        
         <div className=' flex flex-col gap-10 text-center rocket py-20'>
             <div className='text-2xl font-semibold'>Careers</div>
             <div className='font-bold text-6xl'>Navigate Your Next <br /><span className='text-green-700'>Career</span> Move</div>
@@ -103,12 +171,36 @@ export default function Navigation() {
         </div>
 
         <div className='bg-[#f5f5f5] text-center pt-24'>
-
+         <div >
+<motion.div
+ref={ref1}
+    variants={{
+        hidden: {opacity: 0, y: 60},
+        visible: {opacity: 1, y: 0},
+    }}
+    initial= "hidden"
+    animate={mainControls1}
+    // animate= "visible"
+    transition={{duration: 0.5, delay: 0.25}}
+    >  
 <div className={`flex flex-col gap-5`}>
     <h5 className='text-2xl font-semibold text-red-600'>Values</h5>
     <h2 className='text-primary text-4xl font-bold'>We Believe in</h2>
     <p className='text-slate-700 text-base'>We believe in creating an environment where individuals can thrive and make a<br /> meaningful impact.</p>
 </div>
+ </motion.div>
+</div>
+ <motion.div
+ref={ref2}
+    variants={{
+        hidden: {opacity: 0, y: 60},
+        visible: {opacity: 1, y: 0},
+    }}
+    initial= "hidden"
+    animate={mainControls2}
+    // animate= "visible"
+    transition={{duration: 0.5, delay: 0.25}}
+    > 
 <div className='grid grid-cols-3 gap-6 believe py-8'>
 
 <div className='bg-white shadow-lg p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hoverValues'>
@@ -147,12 +239,38 @@ export default function Navigation() {
      adaptability in your career journey</p>
 </div>
 </div>
+</motion.div>
 <div className='bg-white py-20'>
 <div className='container '>
-<div className={`flex flex-col gap-5`}>
+
+    <div ref={ref3}>
+<motion.div
+    variants={{
+        hidden: {opacity: 0, y: 60},
+        visible: {opacity: 1, y: 0},
+    }}
+    initial= "hidden"
+    animate={mainControls3}
+    // animate= "visible"
+    transition={{duration: 0.5, delay: 0.28}}
+    >
+        <div  className={`flex flex-col gap-5`}>
     <h5 className='text-2xl font-semibold text-red-600'>Benefits</h5>
     <h2 className='text-primary text-4xl font-bold'>Life At Metalogic</h2>
 </div>
+</motion.div></div>
+
+<motion.div
+ref={ref4}
+    variants={{
+        hidden: {opacity: 0, y: 60},
+        visible: {opacity: 1, y: 0},
+    }}
+    initial= "hidden"
+    animate={mainControls4}
+    // animate= "visible"
+    transition={{duration: 0.5, delay: 0.25}}
+    > 
 <div className='grid grid-cols-4 gap-4 py-8'>
 <div className='bg-white  p-6 w-full h-70 rounded-3xl flex flex-col gap-4 text-left hover:border hover:shadow-lg hoverBenefits'>
 <div><Image src={flexible} width={40} height={40} className={'scaleImg'}></Image></div>
@@ -196,17 +314,31 @@ export default function Navigation() {
 </div>
 
 </div>
+</motion.div>
 </div>
 </div>
 
 
 <div className='bg-[#ffffe1] py-24'>
+<motion.div
+ref={ref5}
+    variants={{
+        hidden: {opacity: 0, y: 60},
+        visible: {opacity: 1, y: 0},
+    }}
+    initial= "hidden"
+    animate={mainControls5}
+    // animate= "visible"
+    transition={{duration: 0.5, delay: 0.25}}
+    > 
 <div className='container flex gap-44'>
+
     <div className='w-1/4 text-left flex flex-col gap-5 pl-8'>
     <h3 className='text-2xl font-bold text-primary'>Metalogic Cares For You</h3>
     <p className='text-gray-600 space-y-0 text-base'>We're less about valuing perks and more about valuing people. Our employee benefits are
      built around enhancing your wellbeing - at work and at home</p>
     </div>
+
     <div className='w-2/4 grid grid-cols-3 gap-4 text-center'>
 
     <div className='bg-white  py-12 px-8 rounded-3xl flex flex-col gap-4 text-left border shadow-lg rotateHover'>
@@ -236,9 +368,21 @@ export default function Navigation() {
     
     </div>
 </div>
+</motion.div>
 </div>
 
 <div className='bg-white py-28'>
+<motion.div
+ref={ref7}
+    variants={{
+        hidden: {opacity: 0, y: 60},
+        visible: {opacity: 1, y: 0},
+    }}
+    initial= "hidden"
+    animate={mainControls7}
+    // animate= "visible"
+    transition={{duration: 0.5, delay: 0.25}}
+    > 
     <div className={`flex flex-col gap-5`}>
     <h5 className='text-2xl font-semibold text-yellow-600'>Opportunities</h5>
     <h2 className='text-primary text-4xl font-bold'>Available Vacancies</h2>
@@ -258,6 +402,7 @@ export default function Navigation() {
         </div>
     </form>
 </div>
+</motion.div>
 <div className='flex justify-center py-24'>
 <div className='w-[50%] text-left'>
     <h3 className='text-xl font-semibold'>2 Job Offers</h3>
@@ -271,7 +416,7 @@ export default function Navigation() {
    
 </div>
 </div>
-    </div>
+    </div></div>
 <div className='bg-[#cec6c6] flex justify-center py-24'>
     <div className='w-[50%] flex flex-col gap-8'>
     <p className='text-xl font-semibold'>Subscribe to our News Letters</p>
@@ -285,7 +430,9 @@ export default function Navigation() {
     </form>
 </div>
 </div>
+
 </div>
+
 <Footer/>
         </>
     }
