@@ -1,0 +1,21 @@
+-Imports: Various dependencies and assets necessary for the page are imported, including React components, icons, images, and styling.
+
+-State Management:React's state (useState) is used to manage the active page and whether the menu is open or closed.
+
+-Refs and Animations: Refs are used to track elements in the DOM, and Framer Motion is used for animations. This includes setting up refs for each section of the page and controlling animations based on whether those sections are in view (useInView) and managing animation controls (useAnimation).
+
+-Menu Toggle: A function handleMenuToggle is defined to toggle the state of the menu between open and closed.
+
+-Navigation Bar: The navigation bar includes the company logo, navigation links, and a responsive menu icon (IoMdMenu from React Icons) that toggles the visibility of the menu.
+
+-Page Content: The page content includes various sections like "Values," "Benefits," "Opportunities," etc., each wrapped in a motion.div for animations.
+
+-Sections: Each section has its own content and animations defined using Framer Motion. For example, the "Values" section includes values like "Continuous Learning," "Team Work," etc., each represented with an icon and description.
+
+-Form: A form is included in the "Opportunities" section for searching job titles and levels.
+
+-Job Offers: The available job offers are displayed in a list format, including details like job title, status, location, etc.
+
+-Newsletter Subscription: A form for subscribing to newsletters is included at the bottom of the page.
+
+-Footer: The page includes a footer component, possibly for additional navigation or contact information.
