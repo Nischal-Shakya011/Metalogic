@@ -166,7 +166,7 @@ if(isInView1){
             <div className='font-bold text-6xl'>Navigate Your Next <br /><span className='text-green-700'>Career</span> Move</div>
             <div className='text-slate-800 text-base'>We&apos;re continiously searching for the<br /> right talent. Check if you&apos;re a good<br /> match.</div>
             <div className='text-center'>
-            <button className='bg-primary text-white py-2 px-6 rounded-lg'>Explore Opportunities</button>
+           <Link href={"#opportunities"}><button className='bg-primary text-white py-2 px-6 rounded-lg'>Explore Opportunities</button></Link> 
             </div>
         </div>
 
@@ -371,7 +371,7 @@ ref={ref5}
 </motion.div>
 </div>
 
-<div className='bg-white py-28'>
+<div className='bg-white py-28' id='opportunities'>
 <motion.div
 ref={ref7}
     variants={{
