@@ -16,7 +16,7 @@ export default function Footer(){
     return(
         <>
         <div className="bg-primary py-16">
-            <div className="container flex gap-20">
+            <div className="container flex flex-col gap-20 lg:flex-row">
 <div className="flex gap-3">
     <div><Image src={metalogo} alt='' width={50} height={50}></Image></div>
     <div className="flex flex-col gap-4 text-left text-white">
@@ -31,7 +31,7 @@ export default function Footer(){
         </div>
     </div>
 </div>
-<div className="flex gap-14">
+<div className="flex flex-col md:flex-row gap-14">
 <div className="text-white flex flex-col gap-1">
     <h3 className="font-semibold">Company</h3>
     <ul className="text-sm">
