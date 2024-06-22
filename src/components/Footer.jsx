@@ -15,7 +15,7 @@ export default function Footer(){
 
     return(
         <>
-        <div className="bg-primary py-16">
+        <div className="bg-primary py-16"> 
             <div className="container flex flex-col gap-20 lg:flex-row">
 <div className="flex gap-3">
     <div><Image src={metalogo} alt='' width={50} height={50}></Image></div>
